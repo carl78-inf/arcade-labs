@@ -1,6 +1,6 @@
 import arcade
 
-WIDTH = 600
+WIDTH = 800
 HEIGHT = 600
 
 arcade.open_window(WIDTH, HEIGHT, "Example")
