@@ -7,8 +7,50 @@ arcade.open_window(WIDTH, HEIGHT, "Example")
 arcade.set_background_color(arcade.color.SKY_BLUE)
 arcade.start_render()
 
+# --- Draw the barn ---
 
+# Barn cement base
+arcade.draw_lrbt_rectangle_filled(30, 350, 170, 210, arcade.color.BISQUE)
 
+# Bottom half
+arcade.draw_lrbt_rectangle_filled(30, 350, 210, 350, arcade.color.BROWN)
+
+# Left-bottom window
+arcade.draw_rect_filled(arcade.XYWH(70, 260, 30, 40), arcade.color.BONE)
+arcade.draw_rect_filled(arcade.XYWH(70, 260, 20, 30), arcade.color.BLACK)
+
+# Right-bottom window
+arcade.draw_rect_filled(arcade.XYWH(310, 260, 30, 40), arcade.color.BONE)
+arcade.draw_rect_filled(arcade.XYWH(310, 260, 20, 30), arcade.color.BLACK)
+
+# Barn door
+arcade.draw_rect_filled(arcade.XYWH(190, 230, 100, 100), arcade.color.BLACK_BEAN)
+
+# Rail above the door
+arcade.draw_rect_filled(arcade.XYWH(190, 280, 180, 5), arcade.color.BONE)
+
+# Draw second level of barn
+arcade.draw_polygon_filled([[20, 350],
+                            [100, 470],
+                            [280, 470],
+                            [360, 340]],
+                            arcade.color.BROWN)
+
+# Draw loft of barn
+arcade.draw_triangle_filled(100, 470, 280, 470, 190, 500, arcade.color.BROWN)
+
+# Left-top window
+arcade.draw_rect_filled(arcade.XYWH(130, 440, 30, 40), arcade.color.BONE)
+arcade.draw_rect_filled(arcade.XYWH(130, 440, 20, 30), arcade.color.BLACK)
+
+# Right-top window
+arcade.draw_rect_filled(arcade.XYWH(250, 440, 30, 40), arcade.color.BONE)
+arcade.draw_rect_filled(arcade.XYWH(250, 440, 20, 30), arcade.color.BLACK)
+
+# Draw 2nd level door
+arcade.draw_rect_outline(arcade.XYWH(190, 310, 30, 60), arcade.color.BONE, 5)
+#---------------------------------------------------------------------------------------------------------
+"""
 arcade.draw_lbwh_rectangle_filled(left=0, bottom=0, width=800, height=200, color=arcade.color.GREEN)
 arcade.draw_circle_filled(center_x=400, center_y=300, radius=100, color=arcade.color.WHITE)
 arcade.draw_circle_outline(center_x=400, center_y=300, radius=100, color=arcade.color.BLACK, border_width=10)
@@ -40,7 +82,31 @@ arcade.draw_circle_filled(center_x=385, center_y=320, radius=6, color=arcade.col
 arcade.draw_circle_filled(center_x=415, center_y=320, radius=6, color=arcade.color.BLACK)
 
 arcade.draw_circle_outline(center_x=425, center_y=280, radius=10, color=arcade.color.BLACK, border_width=5)
-arcade.draw_circle_outline(center_x=375, center_y=280, radius=10, color=arcade.color.BLACK, border_width=5)
+arcade.draw_circle_outline(center_x=375, center_y=280, radius=10, color=arcade.color.BLACK, border_width=5)"""
+
+#-----------------------------------------------------------------------------------------------------------------
+def dibujar_cuerpo(x: int, y: int, escala: float)->None:
+    arcade.draw_circle_filled(center_x=x, center_y=y, radius=100*escala, color=arcade.color.WHITE)
+    arcade.draw_circle_outline(center_x=x, center_y=y, radius=100*escala, color=arcade.color.BLACK, border_width=10)
+
+    arcade.draw_lbwh_rectangle_filled(left=x-60*escala, bottom=195, width=30, height=50, color=arcade.color.WHITE)
+    arcade.draw_lbwh_rectangle_outline(left=x-60*escala, bottom=195, width=30, height=50, color=arcade.color.BLACK, border_width=10)
+
+    arcade.draw_lbwh_rectangle_filled(left=430, bottom=y-105*escala, width=30*escala, height=50*escala, color=arcade.color.WHITE)
+    arcade.draw_lbwh_rectangle_outline(left=430, bottom=y-105*escala, width=30*escala, height=50*escala, color=arcade.color.BLACK, border_width=10)
+
+
+def dibujar_vaca(x: int, y: int, escala: float) -> None:
+    pass
+
+
+dibujar_cuerpo(400,300,1)
+
+#-----------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 arcade.finish_render()
 
