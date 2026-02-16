@@ -1,4 +1,5 @@
 import arcade
+import math
 
 contador = 0
 
@@ -41,12 +42,21 @@ class MiJuego(arcade.Window):
         super().__init__(SCREEN_WIDTH, SCREEN_HEIGHT, "Mi Juego")
         arcade.set_background_color(arcade.color.AIR_SUPERIORITY_BLUE)
 
+        self.contador = 0
+
         self.pos_x = 0
+        self.pos_y = 0
+        self.escala = 0
     
     def on_draw(self):
         self.clear()
+        if self.pos_x > 800: 
+            self.pos_x = 0
         self.pos_x += 1
-        dibujar_vaca(self.pos_x,200,0.5)
+        self.contador += 0.2
+        self.pos_y = math.sin(self.contador + 1) * 100 + 300
+        self.escala = math.sin(self.contador / 10 + 1) + 1.1
+        dibujar_vaca(self.pos_x,self.pos_y,self.escala)
         
 
 if __name__ == "__main__":
