@@ -56,6 +56,7 @@ class MiJuego(arcade.Window):
         self.contador += 0.2
         self.pos_y = math.sin(self.contador + 1) * 100 + 300
         self.escala = math.sin(self.contador / 10 + 1) + 1.1
+        arcade.draw_lrbt_rectangle_filled(0, 800, 0, 200, arcade.color.BITTER_LIME)
         dibujar_vaca(self.pos_x,self.pos_y,self.escala)
         
 

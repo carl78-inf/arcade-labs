@@ -8,7 +8,7 @@ arcade.set_background_color(arcade.color.SKY_BLUE)
 arcade.start_render()
 
 # --- Draw the barn ---
-
+arcade.draw_lrbt_rectangle_filled(0, 800, 0, 200, arcade.color.BITTER_LIME)
 # Barn cement base
 arcade.draw_lrbt_rectangle_filled(30, 350, 170, 210, arcade.color.BISQUE)
 
