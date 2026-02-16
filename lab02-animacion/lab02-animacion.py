@@ -40,10 +40,13 @@ class MiJuego(arcade.Window):
     def __init__(self):
         super().__init__(SCREEN_WIDTH, SCREEN_HEIGHT, "Mi Juego")
         arcade.set_background_color(arcade.color.AIR_SUPERIORITY_BLUE)
+
+        self.pos_x = 0
     
     def on_draw(self):
         self.clear()
-        dibujar_vaca(contador,200,0.5)
+        self.pos_x += 1
+        dibujar_vaca(self.pos_x,200,0.5)
         
 
 if __name__ == "__main__":
