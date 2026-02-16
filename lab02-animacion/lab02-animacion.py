@@ -43,10 +43,11 @@ class MiJuego(arcade.Window):
     
     def on_draw(self):
         self.clear()
-        dibujar_vaca(self,200,0.5)
-        # Cambiar la posición y/o tamaño del dibujo para crear animación
+        dibujar_vaca(contador,200,0.5)
         
 
 if __name__ == "__main__":
     juego = MiJuego()
+    contador +=5
+    juego.on_draw
     arcade.run()
