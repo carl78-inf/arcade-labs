@@ -2,3 +2,5 @@
 ¿Cuántos continentes hay?|5|7|6|3
 ¿Qué lenguaje se usa para programar en Arcade?|Python|Java|JavaScript|C
 ¿La tortilla de patata lleva cebolla?|Jamás|Si|No con excepciones|Tal vez
+¿Te ha gustado este minijuego?|Si|No|Es horrible|No está mal|Nada
+¿Alguien te está obligando a probar este juego?|Sí
