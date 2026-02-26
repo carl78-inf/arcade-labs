@@ -12,15 +12,15 @@
       "description": "Unknown 1",
       "north": {"next_room": 3, "message": ""},
       "east": {"next_room": 2, "message": ""},
-      "south": {"next_room": -1, "message": ""},
-      "west": {"next_room": -1, "message": ""}
+      "south": {"next_room": -1, "message": "Si quieres estamparte contra un muro, adelante."},
+      "west": {"next_room": -1, "message": "¿Acaso puedes atravesar paredes?"}
     },
     {
       "number": 2,
       "description": "Unknown 2",
       "north": {"next_room": 4, "message": ""},
-      "east": {"next_room": -1, "message": ""},
-      "south": {"next_room": -1, "message": ""},
+      "east": {"next_room": -1, "message": "A menos que seas capaz de doblar los barrotes yo no iría por ahí."},
+      "south": {"next_room": -1, "message": "¿Y destrozar ese precioso cuadro?"},
       "west": {"next_room": 1, "message": ""}
     },
     {
@@ -29,12 +29,12 @@
       "north": {"next_room": 6, "message": ""},
       "east": {"next_room": 4, "message": ""},
       "south": {"next_room": 1, "message": ""},
-      "west": {"next_room": -1, "message": ""}
+      "west": {"next_room": -1, "message": "¡Uy!¡No! Le tengo fobia a las arañas."}
     },
     {
       "number": 4,
       "description": "Unknown 4",
-      "north": {"next_room": -1, "message": ""},
+      "north": {"next_room": -1, "message": "Por supuesto, ¿tienes dinamita? ... Ya me lo imaginaba."},
       "east": {"next_room": 5, "message": ""},
       "south": {"next_room": 2, "message": ""},
       "west": {"next_room": 3, "message": ""}
@@ -42,17 +42,17 @@
     {
       "number": 5,
       "description": "Unknown 5",
-      "north": {"next_room": -1, "message": ""},
-      "east": {"next_room": -1, "message": ""},
-      "south": {"next_room": -1, "message": ""},
+      "north": {"next_room": -1, "message": "¡Por dios! Es una habitación cerrada. Solo hay una salida."},
+      "east": {"next_room": -1, "message": "Mira a tu alrededor. ¿Crees que es buena idea darse de cabezazos contra un muro de ladrillo?"},
+      "south": {"next_room": -1, "message": "Sin comentarios... ¡tú sabras!"},
       "west": {"next_room": 4, "message": ""}
     },
     {
       "number": 6,
       "description": "Unknown 6",
-      "north": {"next_room": -1, "message": ""},
-      "east": {"next_room": -1, "message": ""},
+      "north": {"next_room": -1, "message": "¿Bromeas? Es todo campo, no llegaremos a ningún lado."},
+      "east": {"next_room": -1, "message": "Interesante... Aquí hay un coche, pero no tenemos las llaves."},
       "south": {"next_room": 3, "message": ""},
-      "west": {"next_room": -1, "message": ""}
+      "west": {"next_room": -1, "message": "Hay un rastrillo que te bloquea el paso, no creo que deb... ¡Ouch!¡Eso ha dolido!"}
     }
 ]
