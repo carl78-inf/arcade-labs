@@ -1,6 +1,6 @@
 [
     {
-      "room": 0,
+      "number": 0,
       "description": "Unknown",
       "north": 1,
       "east": 1,
@@ -8,7 +8,7 @@
       "west": 1
     },
     {
-      "room": 1,
+      "number": 1,
       "description": "Unknown",
       "north": 3,
       "east": 2,
@@ -16,7 +16,7 @@
       "west": -1
     },
     {
-      "room": 2,
+      "number": 2,
       "description": "Unknown",
       "north": 4,
       "east": -1,
@@ -24,7 +24,7 @@
       "west": 1
     },
     {
-      "room": 3,
+      "number": 3,
       "description": "Unknown",
       "north": 6,
       "east": 4,
@@ -32,7 +32,7 @@
       "west": -1
     },
     {
-      "room": 4,
+      "number": 4,
       "description": "Unknown",
       "north": -1,
       "east": 5,
@@ -40,7 +40,7 @@
       "west": 3
     },
     {
-      "room": 5,
+      "number": 5,
       "description": "Unknown",
       "north": -1,
       "east": -1,
@@ -48,7 +48,7 @@
       "west": 4
     },
     {
-      "room": 6,
+      "number": 6,
       "description": "Unknown",
       "north": -1,
       "east": -1,
