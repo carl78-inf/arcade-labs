@@ -1,7 +1,7 @@
 [
     {
       "number": 0,
-      "description": "Unknown",
+      "description": "Unknown 0",
       "north": 1,
       "east": 1,
       "south": 1,
@@ -9,7 +9,7 @@
     },
     {
       "number": 1,
-      "description": "Unknown",
+      "description": "Unknown 1",
       "north": 3,
       "east": 2,
       "south": -1,
@@ -17,7 +17,7 @@
     },
     {
       "number": 2,
-      "description": "Unknown",
+      "description": "Unknown 2",
       "north": 4,
       "east": -1,
       "south": -1,
@@ -25,7 +25,7 @@
     },
     {
       "number": 3,
-      "description": "Unknown",
+      "description": "Unknown 3",
       "north": 6,
       "east": 4,
       "south": 1,
@@ -33,7 +33,7 @@
     },
     {
       "number": 4,
-      "description": "Unknown",
+      "description": "Unknown 4",
       "north": -1,
       "east": 5,
       "south": 2,
@@ -41,7 +41,7 @@
     },
     {
       "number": 5,
-      "description": "Unknown",
+      "description": "Unknown 5",
       "north": -1,
       "east": -1,
       "south": -1,
@@ -49,7 +49,7 @@
     },
     {
       "number": 6,
-      "description": "Unknown",
+      "description": "Unknown 6",
       "north": -1,
       "east": -1,
       "south": 3,
