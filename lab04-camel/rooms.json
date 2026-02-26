@@ -43,7 +43,7 @@
       "number": 5,
       "description": "Unknown 5",
       "north": {"next_room": -1, "message": "¡Por dios! Es una habitación cerrada. Solo hay una salida."},
-      "east": {"next_room": -1, "message": "Mira a tu alrededor. ¿Crees que es buena idea darse de cabezazos contra un muro de ladrillo?"},
+      "east": {"next_room": -1, "message": "¿Crees que es buena idea darse de cabezazos contra un muro de ladrillo?"},
       "south": {"next_room": -1, "message": "Sin comentarios... ¡tú sabras!"},
       "west": {"next_room": 4, "message": ""}
     },
