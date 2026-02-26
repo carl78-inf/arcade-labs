@@ -12,7 +12,7 @@ if __name__ == '__main__':
 
     room_list = []
 
-    with open("rooms.json", "r", encoding='utf-8') as file:
+    with open("lab04-camel\\rooms.json", "r", encoding='utf-8') as file:
         room_information = json.load(file)
 
     #print(room_information)
@@ -36,7 +36,8 @@ if __name__ == '__main__':
         elif answer[0].lower() == 'w':
             next_room = room_list[current_room].west
         
-        if(next_room != -1):
-            current_room = next_room
+        if(next_room["next_room"] != -1):
+            current_room = next_room["next_room"]
         else:
-            print("No puedes ir por ahí")
+            if next_room["message"] != "": print(next_room["message"])
+            else: print("No puedes ir por ahí")

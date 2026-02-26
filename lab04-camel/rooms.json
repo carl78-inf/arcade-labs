@@ -2,57 +2,57 @@
     {
       "number": 0,
       "description": "Unknown 0",
-      "north": 1,
-      "east": 1,
-      "south": 1,
-      "west": 1
+      "north": {"next_room": 1, "message": ""},
+      "east": {"next_room": 1, "message": ""},
+      "south": {"next_room": 1, "message": ""},
+      "west": {"next_room": 1, "message": ""}
     },
     {
       "number": 1,
       "description": "Unknown 1",
-      "north": 3,
-      "east": 2,
-      "south": -1,
-      "west": -1
+      "north": {"next_room": 3, "message": ""},
+      "east": {"next_room": 2, "message": ""},
+      "south": {"next_room": -1, "message": ""},
+      "west": {"next_room": -1, "message": ""}
     },
     {
       "number": 2,
       "description": "Unknown 2",
-      "north": 4,
-      "east": -1,
-      "south": -1,
-      "west": 1
+      "north": {"next_room": 4, "message": ""},
+      "east": {"next_room": -1, "message": ""},
+      "south": {"next_room": -1, "message": ""},
+      "west": {"next_room": 1, "message": ""}
     },
     {
       "number": 3,
       "description": "Unknown 3",
-      "north": 6,
-      "east": 4,
-      "south": 1,
-      "west": -1
+      "north": {"next_room": 6, "message": ""},
+      "east": {"next_room": 4, "message": ""},
+      "south": {"next_room": 1, "message": ""},
+      "west": {"next_room": -1, "message": ""}
     },
     {
       "number": 4,
       "description": "Unknown 4",
-      "north": -1,
-      "east": 5,
-      "south": 2,
-      "west": 3
+      "north": {"next_room": -1, "message": ""},
+      "east": {"next_room": 5, "message": ""},
+      "south": {"next_room": 2, "message": ""},
+      "west": {"next_room": 3, "message": ""}
     },
     {
       "number": 5,
       "description": "Unknown 5",
-      "north": -1,
-      "east": -1,
-      "south": -1,
-      "west": 4
+      "north": {"next_room": -1, "message": ""},
+      "east": {"next_room": -1, "message": ""},
+      "south": {"next_room": -1, "message": ""},
+      "west": {"next_room": 4, "message": ""}
     },
     {
       "number": 6,
       "description": "Unknown 6",
-      "north": -1,
-      "east": -1,
-      "south": 3,
-      "west": -1
+      "north": {"next_room": -1, "message": ""},
+      "east": {"next_room": -1, "message": ""},
+      "south": {"next_room": 3, "message": ""},
+      "west": {"next_room": -1, "message": ""}
     }
 ]
