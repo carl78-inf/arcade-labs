@@ -5,7 +5,8 @@
       "north": {"next_room": 1, "message": ""},
       "east": {"next_room": 1, "message": ""},
       "south": {"next_room": 1, "message": ""},
-      "west": {"next_room": 1, "message": ""}
+      "west": {"next_room": 1, "message": ""},
+      "open": 1
     },
     {
       "number": 1,
@@ -13,7 +14,8 @@
       "north": {"next_room": 3, "message": ""},
       "east": {"next_room": 2, "message": ""},
       "south": {"next_room": -1, "message": "Si quieres estamparte contra un muro, adelante."},
-      "west": {"next_room": -1, "message": "¿Acaso puedes atravesar paredes?"}
+      "west": {"next_room": -1, "message": "¿Acaso puedes atravesar paredes?"},
+      "open": 1
     },
     {
       "number": 2,
@@ -21,7 +23,8 @@
       "north": {"next_room": 4, "message": ""},
       "east": {"next_room": -1, "message": "A menos que seas capaz de doblar los barrotes yo no iría por ahí."},
       "south": {"next_room": -1, "message": "¿Y destrozar ese precioso cuadro?"},
-      "west": {"next_room": 1, "message": ""}
+      "west": {"next_room": 1, "message": ""},
+      "open": 1
     },
     {
       "number": 3,
@@ -29,7 +32,8 @@
       "north": {"next_room": 6, "message": ""},
       "east": {"next_room": 4, "message": ""},
       "south": {"next_room": 1, "message": ""},
-      "west": {"next_room": -1, "message": "¡Uy!¡No! Le tengo fobia a las arañas."}
+      "west": {"next_room": -1, "message": "¡Uy!¡No! Le tengo fobia a las arañas."},
+      "open": 1
     },
     {
       "number": 4,
@@ -37,7 +41,8 @@
       "north": {"next_room": -1, "message": "Por supuesto, ¿tienes dinamita? ... Ya me lo imaginaba."},
       "east": {"next_room": 5, "message": ""},
       "south": {"next_room": 2, "message": ""},
-      "west": {"next_room": 3, "message": ""}
+      "west": {"next_room": 3, "message": ""},
+      "open": 1
     },
     {
       "number": 5,
@@ -45,7 +50,8 @@
       "north": {"next_room": -1, "message": "¡Por dios! Es una habitación cerrada. Solo hay una salida."},
       "east": {"next_room": -1, "message": "¿Crees que es buena idea darse de cabezazos contra un muro de ladrillo?"},
       "south": {"next_room": -1, "message": "Sin comentarios... ¡tú sabras!"},
-      "west": {"next_room": 4, "message": ""}
+      "west": {"next_room": 4, "message": ""},
+      "open": 0
     },
     {
       "number": 6,
@@ -53,6 +59,7 @@
       "north": {"next_room": -1, "message": "¿Bromeas? Es todo campo, no llegaremos a ningún lado."},
       "east": {"next_room": -1, "message": "Interesante... Aquí hay un coche, pero no tenemos las llaves."},
       "south": {"next_room": 3, "message": ""},
-      "west": {"next_room": -1, "message": "Hay un rastrillo que te bloquea el paso, no creo que deb... ¡Ouch!¡Eso ha dolido!"}
+      "west": {"next_room": -1, "message": "Hay un rastrillo que te bloquea el paso, no creo que deb... ¡Ouch!¡Eso ha dolido!"},
+      "open": 0
     }
 ]
