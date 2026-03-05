@@ -3,6 +3,7 @@ import arcade
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 MOVEMENT_SPEED = 3
+DEAD_ZONE = 0.02
 
 def dibujar_vaca(x: int, y: int, escala: float)->None:
     arcade.draw_circle_filled(center_x=x, center_y=y, radius=100*escala, color=arcade.color.WHITE)
@@ -66,8 +67,6 @@ class Cow:
             self.pos_y = 0
             self.change_y *= -1
 
-
-
 class MyGame(arcade.Window):
     def __init__(self, mouse = False):
         super().__init__(SCREEN_WIDTH, SCREEN_HEIGHT, "Lab 7 - User Control")
@@ -124,9 +123,8 @@ class MyGame(arcade.Window):
         elif key == arcade.key.UP or key == arcade.key.DOWN:
             self.cow.change_y = 0
 
-
 def main():
-    window = MyGame()
+    window = MyGame(mouse=True)
     arcade.run()
 
 
