@@ -52,15 +52,19 @@ class Cow:
 
         if self.pos_x > SCREEN_WIDTH:
             self.pos_x = SCREEN_WIDTH
+            self.change_x *= -1
 
         if self.pos_y > SCREEN_HEIGHT:
             self.pos_y = SCREEN_HEIGHT
+            self.change_y *= -1
         
         if self.pos_x < 0:
             self.pos_x = 0
+            self.change_x *= -1
 
         if self.pos_y < 0:
             self.pos_y = 0
+            self.change_y *= -1
 
 
 
@@ -71,6 +75,14 @@ class MyGame(arcade.Window):
         self.cow = Cow(400, 300, 1, 0, 0)
         self.set_mouse_visible(False)
         self.mouse = mouse
+
+        joysticks = arcade.get_joysticks()
+        if joysticks:
+            self.joystick = joysticks[0]
+            self.joystick.open()
+        else:
+            print("There are no joysticks.")
+            self.joystick = None
     
     def on_draw(self):
         self.clear()
@@ -78,6 +90,10 @@ class MyGame(arcade.Window):
         self.cow.draw()
     
     def on_update(self, delta_time):
+        if self.joystick:
+            self.cow.change_x = self.joystick.x*(MOVEMENT_SPEED+1)
+            self.cow.change_y = -self.joystick.y*(MOVEMENT_SPEED+1)
+
         self.cow.on_update()
 
     def on_mouse_motion(self, x, y, dx, dy):
@@ -110,7 +126,7 @@ class MyGame(arcade.Window):
 
 
 def main():
-    window = MyGame(mouse=True)
+    window = MyGame()
     arcade.run()
 
 
