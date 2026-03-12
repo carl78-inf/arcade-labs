@@ -42,13 +42,13 @@ class Player:
 class Coin:
     def __init__(self, scale, change_x, change_y):
         self.list = arcade.SpriteList()
-        self.sprite = arcade.Sprite(":resources:images/items/coinGold.png", scale)
+        self.sprite = arcade.Sprite(":resources:images/items/coinGold.png", 0.5)
         self.score = 0
         self.sprite.center_x = random.randrange(SCREEN_WIDTH)
         self.sprite.center_y = random.randrange(SCREEN_HEIGHT)
         self.list.append(self.sprite)
-        self.change_x = change_x
-        self.change_y = change_y
+        self.change_x = random.randrange(5) - 2
+        self.change_y = random.randrange(5) - 2
     
     def draw(self):
         self.list.draw()
@@ -79,16 +79,20 @@ class MyGame(arcade.Window):
         super().__init__(SCREEN_WIDTH, SCREEN_HEIGHT, "Lab 7 - User Control")
         arcade.set_background_color(arcade.color.ASH_GREY)
         self.player = Player(400, 300, 1, 0, 0)
-        self.coin = Coin(400, 300, 1, 3, 3)
+        self.coin_list = []
+        for i in range(5):
+            self.coin_list.append(Coin(1, 3, 3))
     
     def on_draw(self):
         self.clear()
         self.player.draw()
-        self.coin.draw()
+        for coin in self.coin_list:
+            coin.draw()
     
     def on_update(self, delta_time):
         self.player.on_update()
-        self.coin.on_update()
+        for coin in self.coin_list:
+            coin.on_update()
     
     def on_key_press(self, key, modifiers):
         if key == arcade.key.LEFT:
