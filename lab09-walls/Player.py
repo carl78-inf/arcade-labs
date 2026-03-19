@@ -2,25 +2,29 @@
 import arcade
 
 class Player:
-    def __init__(self, pos_x, pos_y, speed = 3):
+    def __init__(self, pos_x, pos_y, scale, speed = 3,):
         self.pos_x = pos_x
         self.pos_y = pos_y
         self.speed = speed
         self.change_x = 0
         self.change_y = 0
         self.width = 30
-        self.hight = 40
+        self.hight = 50
+        self.list = arcade.SpriteList()
+        self.sprite = arcade.Sprite(":resources:images/animated_characters/male_adventurer/maleAdventurer_walk4.png", scale)
+        self.score = 0
+        self.list.append(self.sprite)
 
     def on_draw(self):
+        self.list.draw()
         arcade.draw_lbwh_rectangle_outline(left=self.pos_x - (self.width / 2), bottom=self.pos_y - (self.hight / 2), \
                                            width=self.width, height=self.hight, color=arcade.color.RED, border_width= 2)
-
+        
     def on_update(self):
         self.pos_x += self.change_x
         self.pos_y += self.change_y
-
-    def move(self):
-        pass
+        self.sprite.center_x = self.pos_x
+        self.sprite.center_y = self.pos_y + 5
 
     def on_key_press(self, key):
         if key == arcade.key.LEFT:
