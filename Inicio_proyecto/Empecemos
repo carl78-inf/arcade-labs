@@ -1,7 +1,7 @@
 """
 Platformer Game
 
-python -m arcade.examples.platform_tutorial.07_camera
+python -m arcade.examples.platform_tutorial.09_sound
 """
 import arcade
 
@@ -12,6 +12,7 @@ WINDOW_TITLE = "Platformer"
 
 # Constants used to scale our sprites from their original size
 TILE_SCALING = 0.5
+COIN_SCALING = 0.5
 
 # Movement speed of player, in pixels per frame
 PLAYER_MOVEMENT_SPEED = 5
@@ -46,8 +47,15 @@ class GameView(arcade.Window):
         # SpriteList do not move.
         self.wall_list = None
 
+        # SpriteList for coins the player can collect
+        self.coin_list = None
+
         # A variable to store our camera object
         self.camera = None
+
+        # Load sounds
+        self.collect_coin_sound = arcade.load_sound(":resources:sounds/coin1.wav")
+        self.jump_sound = arcade.load_sound(":resources:sounds/jump1.wav")
 
     def setup(self):
         """Set up the game here. Call this function to restart the game."""
@@ -63,6 +71,7 @@ class GameView(arcade.Window):
         self.player_list.append(self.player_sprite)
 
         self.wall_list = arcade.SpriteList(use_spatial_hash=True)
+        self.coin_list = arcade.SpriteList(use_spatial_hash=True)
 
         # Create the ground
         # This shows using a loop to place multiple sprites horizontally
@@ -83,6 +92,13 @@ class GameView(arcade.Window):
             )
             wall.position = coordinate
             self.wall_list.append(wall)
+
+        # Add coins to the world
+        for x in range(128, 1250, 256):
+            coin = arcade.Sprite(":resources:images/items/coinGold.png", scale=COIN_SCALING)
+            coin.center_x = x
+            coin.center_y = 96
+            self.coin_list.append(coin)
 
         # Create a Platformer Physics Engine, this will handle moving our
         # player as well as collisions between the player sprite and
@@ -112,12 +128,24 @@ class GameView(arcade.Window):
         # Draw our sprites
         self.player_list.draw()
         self.wall_list.draw()
+        self.coin_list.draw()
 
     def on_update(self, delta_time):
         """Movement and Game Logic"""
 
         # Move the player using our physics engine
         self.physics_engine.update()
+
+        # See if we hit any coins
+        coin_hit_list = arcade.check_for_collision_with_list(
+            self.player_sprite, self.coin_list
+        )
+
+        # Loop through each coin we hit (if any) and remove it
+        for coin in coin_hit_list:
+            # Remove the coin
+            coin.remove_from_sprite_lists()
+            arcade.play_sound(self.collect_coin_sound)
 
         # Center our camera on the player
         self.camera.position = self.player_sprite.position
@@ -131,6 +159,7 @@ class GameView(arcade.Window):
         if key == arcade.key.UP or key == arcade.key.W:
             if self.physics_engine.can_jump():
                 self.player_sprite.change_y = PLAYER_JUMP_SPEED
+                arcade.play_sound(self.jump_sound)
 
         if key == arcade.key.LEFT or key == arcade.key.A:
             self.player_sprite.change_x = -PLAYER_MOVEMENT_SPEED
