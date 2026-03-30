@@ -28,8 +28,13 @@ class Player:
     def on_update(self):
         height = self.sprite.height
         self.sprite.scale = list(self.sprite.scale)[0] + self.change_z
+        if(0.3 <= list(self.sprite.scale)[0] <= 1):
         #if(self.change_z != 0): self.change_y += list(self.sprite.scale)[0]*self.sprite.height*(-1) // (list(self.sprite.scale)[0]*(self.sprite.height/2)*(-1))*self.change_z
-        self.sprite.center_y += -(1/2)*height + (1/2)*self.sprite.height
+            self.sprite.center_y += -(1/2)*height + (1/2)*self.sprite.height
+        elif(list(self.sprite.scale)[0] < 0.3):
+            self.sprite.scale = 0.3
+        elif(list(self.sprite.scale)[0] > 1):
+            self.sprite.scale = 1
         self.sprite.center_x += self.change_x
         #print(f'X = {self.sprite.center_x} Y = {self.sprite.center_y}, Scale = {self.sprite.scale}')
 
@@ -75,9 +80,9 @@ class MyGame(arcade.Window):
         elif key == arcade.key.RIGHT:
             self.player.change_x = MOVEMENT_SPEED
         elif key == arcade.key.UP:
-            self.player.change_z = -0.01
+            if(list(self.player.sprite.scale)[0] > 0): self.player.change_z = -0.01
         elif key == arcade.key.DOWN:
-            self.player.change_z = 0.01
+            if(list(self.player.sprite.scale)[0] < 1): self.player.change_z = 0.01
     
     def on_key_release(self, key, modifiers):
         if key == arcade.key.LEFT or key == arcade.key.RIGHT:
