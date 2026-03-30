@@ -18,5 +18,15 @@
       "pregunta": "¿La tortilla de patata lleva cebolla?",
       "correcta": "Jamás",
       "opciones": ["Jamás", "Sí", "No con excepciones", "Tal vez"]
+    },
+    {
+      "pregunta": "¿Te ha gustado este minijuego?",
+      "correcta": "Si",
+      "opciones": ["Si", "No", "Es horrible", "No está mal", "Nada"]
+    },
+    {
+      "pregunta": "¿Alguien te está obligando a probar este juego?",
+      "correcta": "Sí",
+      "opciones": ["Sí"]
     }
 ]
