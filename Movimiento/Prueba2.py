@@ -1,8 +1,4 @@
-"""
-Platformer Game
-
-python -m arcade.examples.platform_tutorial.14_multiple_levels
-"""
+# Prueba 2
 import arcade
 
 SCREEN_WIDTH = 800
