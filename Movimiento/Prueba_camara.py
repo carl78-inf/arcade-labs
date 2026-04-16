@@ -13,7 +13,7 @@ WINDOW_HEIGHT = 720
 WINDOW_TITLE = "Platformer"
 
 # Constants used to scale our sprites from their original size
-TILE_SCALING = 0.5
+TILE_SCALING = 2
 COIN_SCALING = 0.5
 
 # Movement speed of player, in pixels per frame
@@ -55,8 +55,13 @@ class GameView(arcade.Window):
         }
 
         # Load our TileMap
-        self.tile_map = arcade.load_tilemap(
+        """self.tile_map = arcade.load_tilemap(
             f":resources:tiled_maps/map2_level_{self.level}.json",
+            scaling=TILE_SCALING,
+            layer_options=layer_options,
+        )"""
+        self.tile_map = arcade.load_tilemap(
+            r"C:\Users\Carlos UAH\OneDrive - Universidad de Alcala\1ºUAH\2ºCuatrimestre\Tecnología de videojuegos\Inicio_proyecto\ps.json",
             scaling=TILE_SCALING,
             layer_options=layer_options,
         )
@@ -73,7 +78,7 @@ class GameView(arcade.Window):
         # Setting before using scene.add_sprite allows us to define where the SpriteList
         # will be in the draw order. If we just use add_sprite, it will be appended to the
         # end of the order.
-        self.scene.add_sprite_list_after("Player", "Foreground")
+        #self.scene.add_sprite_list_after("Player", "Foreground")
 
         self.player_sprite = arcade.Sprite(self.player_texture)
         self.player_sprite.center_x = 128
